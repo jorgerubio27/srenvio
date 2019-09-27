@@ -1,0 +1,101 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+
+
+.navbar{
+  padding-top: 10px;
+  background-color: #e1e1e1;
+}
+
+.banner {
+    background-color: #472727;
+    // background-image: radial-gradient(darkgray,black);
+    color: beige;
+    text-align: center;
+    width: 15%;
+    height: 5%;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    background-color: #472727;
+    text-align: center;
+    color: white;
+    width: 25%;
+    border-radius: 20px; 
+    margin: 0 auto;
+    
+    
+  }
+
+  .maincontainer {
+    text-align: center;
+    margin: 0 auto;
+    background-color: #363636;
+    width: 80%;
+    height: 999px;
+    border-radius: 10px; 
+    align-content: center;
+  }
+
+
+  .articles {
+    margin: 0 auto;
+    
+    // align-content: center;
+    text-align: center;
+    color: white;
+    width: 60%;
+  }
+
+  .form {
+    margin: 0 auto;
+   
+    text-align: center;
+    color: black;
+    width: 60%;
+  }
+
+  .articlepreview {
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    text-align: center;
+  }
+
+  .show {
+    color: aliceblue;
+    width: 80%;
+  }
+
+  .space {
+    padding-right: 50px;
+    padding-left:  50px;
+  }
+
+  .centab {
+    text-align: center;
+    margin: 0 auto;
+    align-content: center
+  }
+
+  .articletext {
+    color: #CCCCCC
+  }
+
+  .articletitle {
+    font-size: 40px;
+    color: rgb(255, 255, 255)
+  }
+
+  .welcome {
+    text-align: center;
+    color: beige;
+}
+
+ .articleform {
+   color: black;
+ }
