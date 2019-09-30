@@ -15,11 +15,19 @@
   <table>
 
     <%# <td> <%= image_tag("srenviologo.svg", :alt => "") %>  
-   <td> <%= link_to image_tag('srenviologo.svg'), root_path %> <a href="home"> </td>
+   <td> <div class="divlogo"> <%= link_to image_tag('srenviologo.svg'), root_path %> <a href="home"> </div> </td> 
 
-  <td>  <% if current_user %>
-  Logged in as <%= current_user.email %>. 
-  <%= link_to "Salir", logout_path %> </td>
+   <td class="spaces"> </td>
+   <td class="spacel"> </td>
+   <td class="spacel"> </td>
+   <td class="spacel"> </td>
+   
+
+  <td> <div class="navel">  <% if current_user %> </div>
+  Bienvenid@   <%= current_user.email %>. 
+  <%= link_to "Salir", logout_path %> </td> 
+
+
 <% else %>
   <td> <%= link_to "Registrate", signup_path %> </td>
   <td><div class="space"> </div> </td>
