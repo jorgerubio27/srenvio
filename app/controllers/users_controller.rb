@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  http_basic_authenticate_with name: "admin", password: "clamavi231", except: [:index, :show]
+  http_basic_authenticate_with name: "jorgerubio", password: "123"
  
 
   # GET /users

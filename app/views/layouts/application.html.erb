@@ -18,14 +18,16 @@
    <td> <div class="divlogo"> <%= link_to image_tag('srenviologo.svg'), root_path %> <a href="home"> </div> </td> 
 
    <td class="spaces"> </td>
+   <td class="spaces"> </td>
    <td class="spacel"> </td>
    <td class="spacel"> </td>
    <td class="spacel"> </td>
    
 
-  <td> <div class="navel">  <% if current_user %> </div>
+  <td> <div class="navel">  <% if current_user %> 
   Bienvenid@   <%= current_user.email %>. 
   <%= link_to "Salir", logout_path %> </td> 
+  </div>
 
 
 <% else %>
