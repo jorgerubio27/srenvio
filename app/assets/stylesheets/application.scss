@@ -62,6 +62,19 @@ body {
 
   
 }
+
+.request {
+  @include border-radius(10px);
+  font-size: 25px;
+  color: rgb(38, 28, 40);
+  background-color: #eeeeee;
+  width: 350px;
+  text-align: center;
+
+  
+}
+
+
 .link:hover {
   color: yellow;
 
