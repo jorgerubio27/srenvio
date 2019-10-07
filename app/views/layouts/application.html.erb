@@ -10,42 +10,45 @@
   </head>
 
   <body>
-  
   <div class="navbar">
-  <table>
+  
+<table class="tnav"><tr>
 
-    <%# <td> <%= image_tag("srenviologo.svg", :alt => "") %>  
-   <td> <div class="divlogo"> <%= link_to image_tag('srenviologo.svg'), root_path %> <a href="home"> </div> </td> 
+<td>  <%= link_to image_tag('srenviologo.svg'), root_path %> </td>
 
-   <td class="spaces"> </td>
-   <td class="spaces">  </td>
+
+  
+<td align="right">
+<div class="nelement">
+  <%= link_to "Comedor", dinning_path %> 
+  <%= link_to "Registrate", signup_path %> 
    
-   <td class="spacel"> </td>
-   <td class="spacel"> </td>
-   <td class="spacel"> </td>
-   <td> <div class="navel"> <%= link_to "Comedor", dinning_path %> </div>   </td> 
-   
-
-
-  <td> <div class="navel">  <% if current_user %> 
-  Bienvenid@   <%= current_user.email %>. 
-  <%= link_to "Salir", logout_path %> </td> 
   </div>
+<td>
 
-
-<% else %>
-
-  <td class="navel"><%= link_to "Registrate", signup_path %> </td>
-
-  <td class="spaces"></td>
-
- <td class="navel"> <%= link_to "Inicia Sesión", login_path %>   </td>
-<% end %>
-
-  </table>
+<td align="right">   <div class="nelement">
+  <% if current_user %> 
+  Bienvenid@   <%= current_user.email %>!
+  <%= link_to "Salir", logout_path %> 
+  <% else %>
+<%= link_to "Inicia Sesión", login_path %> 
+  <% end %>
   </div>
+</td>
+
+
+  </tr></table>
+</div>
 
 
     <%= yield %>
   </body>
+  <table>
+  <tr> <td>  1  </td> </tr>
+
+  <tr> <td> 2  </td> </tr>
+
+
+
+  </table>
 </html>
