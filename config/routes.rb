@@ -12,6 +12,10 @@ Rails.application.routes.draw do
   get 'request', to: 'dinning#frequest', as: 'frequest'
 
   
+  get '/users/:id/foodreq' => 'users#foodreq'
+  post '/users/:id/foodreq' => 'users#foodreq'
+  # , to: 'patients#show'
+  
 
   get 'dinning/index'
   get 'dinning/today'
