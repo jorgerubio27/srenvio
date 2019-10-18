@@ -9,11 +9,11 @@ Rails.application.routes.draw do
   get 'logout', to: 'sessions#destroy', as: 'logout'
   get 'dinning', to: 'dinning#index', as: 'dinning'
   get 'menutoday', to: 'dinning#today', as: 'menutoday'
-  get 'request', to: 'dinning#frequest', as: 'frequest'
+  get 'foodrequest', to: 'dinning#frequest', as: 'frequest'
 
   
-  get '/users/:id/foodreq' => 'users#foodreq'
-  post '/users/:id/foodreq' => 'users#foodreq'
+  get '/users/:id/foodreq', to:'users#foodreq', as: 'foodreq'
+  post '/users/:id/foodreq' => 'users#foodreq' 
   # , to: 'patients#show'
   
 

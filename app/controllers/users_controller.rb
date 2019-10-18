@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # http_basic_authenticate_with name: "admin", password: "123"
-   def foodreq
-    @user = current_user
-   end
+
 
   # GET /users
   # GET /users.json
@@ -77,6 +75,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :foodreq)
+      params.require(:user).permit(:email, :password, :password_confirmation, :foodreq, :name)
     end
 end

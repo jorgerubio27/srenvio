@@ -20,14 +20,16 @@
   
 <td align="right">
 <div class="nelement">
-  <%= link_to "Comedor", dinning_path %> 
-  <%= link_to "Registrate", signup_path %> 
+  
+
    
   </div>
 <td>
 
 <td align="right">   <div class="nelement">
   <% if current_user %> 
+  <%= link_to "Registrar usuarios", signup_path %> 
+  <%= link_to "Comedor", dinning_path %> 
   Bienvenid@   <%= current_user.email %>!
   <%= link_to "Salir", logout_path %> 
   <% else %>

@@ -6,6 +6,7 @@ class DinningController < ApplicationController
     end
 
     def frequest
+        @user = current_user
     end
   
 end
