@@ -28,7 +28,11 @@
 
 <td align="right">   <div class="nelement">
   <% if current_user %> 
-  <%= link_to "Usuarios", users_path %> 
+  <% if current_user.admin == true %>  
+  <%= link_to "Usuarios", users_path %>
+  <% end %>
+
+
   <%= link_to "Comedor", dinning_path %> 
   Bienvenid@   <%= current_user.email %>!
   <%= link_to "Salir", logout_path %> 

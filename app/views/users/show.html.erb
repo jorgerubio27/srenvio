@@ -1,9 +1,22 @@
+
 <p id="notice"><%= notice %></p>
+<div align ="center">
+<% if current_user && current_user.admin == true  %>
+
 
 <p>
+  <strong>ID:</strong>
+  <%= @user.id %>
   <strong>Email:</strong>
-  <%= @user.email %>
+  <%= @user.email%>
+  <strong>Comedor:</strong>
+  <%= @user.foodreq %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+<% else %>
+
+<% end %>
+</div>

@@ -1,6 +1,16 @@
-<h1>Editing User</h1>
+<h1 align ="center">Editar usuario</h1>
+
+<% if current_user && current_user.admin == true  %>
+
 
 <%= render 'form', user: @user %>
 
+<div align = "center">
 <%= link_to 'Show', @user %> |
 <%= link_to 'Back', users_path %>
+</div>
+
+<% else %>
+<h3 align='center'> Se requieren permisos Admin para esta caracteristica </h3>
+
+<% end %>

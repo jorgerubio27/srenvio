@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-   
+  # http_basic_authenticate_with name: "admin", password: "123"
 
 
   # GET /users
@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    
   end
 
   # GET /users/new
@@ -45,7 +46,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'Usuario actualizado exitosamente.' }
+        format.html { redirect_to @user, notice: 'Información enviada' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -62,7 +63,7 @@ class UsersController < ApplicationController
 
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Usuario destruido u_u.' }
+      format.html { redirect_to users_url, notice: 'Usuario eliminado u_u' }
       format.json { head :no_content }
     end
   end
