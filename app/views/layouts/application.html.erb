@@ -28,7 +28,7 @@
 
 <td align="right">   <div class="nelement">
   <% if current_user %> 
-  <%= link_to "Registrar usuarios", signup_path %> 
+  <%= link_to "Usuarios", users_path %> 
   <%= link_to "Comedor", dinning_path %> 
   Bienvenid@   <%= current_user.email %>!
   <%= link_to "Salir", logout_path %> 
@@ -44,13 +44,5 @@
 
 
     <%= yield %>
-  </body>
-  <table>
-  <tr> <td>  1  </td> </tr>
 
-  <tr> <td> 2  </td> </tr>
-
-
-
-  </table>
 </html>
