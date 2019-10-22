@@ -8,10 +8,8 @@
           border-radius: $radius;
 }
 
-
-
 body {
-  background-color: rgb(111, 111, 111);
+  background-color: rgb(228, 228, 228);
 }
 .divlogo {
   position: absolute;
@@ -27,7 +25,7 @@ body {
 }
 .navbar{
   padding-top: 3px;
-  background-color: #eeeeee;
+  background-color: #313131;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
 }
@@ -68,8 +66,6 @@ body {
   background-color: #eeeeee;
   width: 150px;
   text-align: center;
-
-  
 }
 
 .request {
@@ -78,10 +74,12 @@ body {
   color: rgb(38, 28, 40);
   background-color: #eeeeee;
   width: 350px;
-  text-align: center;
-
-  
+  text-align: center;  
 }
+
+
+
+
 
 
 .link:hover {

@@ -1,10 +1,10 @@
 <div align="center">
 <p id="alert"><%= alert %></p>
-<h1>Iniciar Sesión</h1>
+<h1 class="">Iniciar Sesión</h1>
 <%= form_tag sessions_path do |form| %>
 
-
-    <table class="center">
+    <div align="center">
+    <table class="table">
 
     <tr><td>
     <%= label_tag :email %>
@@ -17,8 +17,10 @@
     </td></tr>
     
     <tr><td>
-    <%= submit_tag "Acceder" %>
+    
+    <%= submit_tag "Acceder" ,class: 'btn' %>
     </td></tr>
     </table>
+    </div>
 
 <% end %>

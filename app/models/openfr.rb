@@ -1,0 +1,2 @@
+class Openfr < ApplicationRecord
+end
