@@ -1,20 +1,29 @@
 
-<p id="notice"><%= notice %></p>
+
 <div align ="center">
 <% if current_user && current_user.admin == true  %>
 
+<table class="table-striped">
+  <tr>
+  <td><strong>ID:</strong></td>
+  <td><%= @user.id %></td>
+  </tr>
+  <tr>
+  <td><strong>Email:</strong></td>
+  <td><%= @user.email%></td>
+  </tr>
+  <td> <strong>Nombre:</strong></td>
+  <td><%= @user.name %></td>
+  <tr>
+  <td><strong>Comedor:</strong></td>
+  <td><%= @user.foodreq %></td>
+  </tr>
+</table>
 
-<p>
-  <strong>ID:</strong>
-  <%= @user.id %>
-  <strong>Email:</strong>
-  <%= @user.email%>
-  <strong>Comedor:</strong>
-  <%= @user.foodreq %>
-</p>
+<%= link_to 'Editar', edit_user_path(@user) %> |
+<%= link_to 'Volver', users_path %>|
+<td><%= link_to 'Eliminar', @user, method: :delete, data: { confirm: 'Confirmar acción' } %></td>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
 
 <% else %>
 

@@ -1,3 +1,4 @@
+<div align="center">
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -11,33 +12,45 @@
     </div>
   <% end %>
 
-    <table class = "center">
 
-    <tr><td>
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-    </td> </tr>
+
+
+    <table class = "signup">
+
+    <tr>
+    <td><%= form.label :email %></td>
+    <td><%= form.text_field :email, class:"curvedfield" %></td>
+    <td></td>
+    </tr>
   
 
-    <tr><td>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-    </td></tr>
+    <tr>
+    <td><%= form.label :name %></td>
+    <td><%= form.text_field :name ,class:"curvedfield" %></td>
+    <td></td>
+    </tr>
   
 
-    <tr><td>
-    <%= form.label :Pass %>
-    <%= form.password_field :password %>
-    </td></tr>
+    <tr>
+    <td><%= form.label :Pass %></td>
+    <td><%= form.password_field :password, class:"curvedfield" %></td>
+    <td></td>
+    </tr>
 
-    <tr><td>
-    <%= form.label :RePass %>
-    <%= form.password_field :password_confirmation %>
-    </td></tr>
+    <tr>
+    <td><%= form.label :RePass %></td>
+    <td><%= form.password_field :password_confirmation, class:"curvedfield" %></td>
+    <td></td>
+    </tr>
 
-    <tr><td>
-    <%= form.submit 'CREAR'%>
-    </td></tr>
+    <tr>
+    <td></td>
+    <td> <div class="spacey"> <div align="center"> <%= form.submit 'Crear', class:'btn' %> </div> </div> </td>
+    <td></td>
+    </tr>
+
+
     </table>
   
 <% end %>
+</div>

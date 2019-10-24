@@ -1,27 +1,46 @@
 <p id="notice"><%= notice %></p>
 
-<h2 align = "center">Usuarios</h2>
-
 
 <% if current_user && current_user.admin == true  %>
 
 
+
+<h2 align = "center">Usuarios</h2>
+
+
+<table class= "table-striped"> 
+<tr>
+<td> <strong>ID</strong> </td>
+<td> <strong>Email</strong> </td>
+<td> <strong>Nombre</strong> </td>
+<td> <strong>Comedor</strong> </td>
+</tr>
+
 <% @users.each do |user| %>
 
-<table align= "center">
-<tr>  <td>_________</td> <td>_________</td> <td>_________</td> </tr> 
-<tr>  <td>ID</td> <td>Email</td> <td>Comedor</td> </tr> 
-<tr>  <td><%=user.id%></td> <td><%=user.email%></td> <td><%=user.foodreq%></td> </tr> 
-<td><%= link_to 'Info', user %></td>
-        <td><%= link_to 'Editar', edit_user_path(user) %></td>
-        <td><%= link_to 'Eliminar', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-</table>
-<% end %>
 
-<div align="center"> <%= link_to 'Crear Usuario', new_user_path %> </div>
+
+
+
+<tr>
+<td><%=link_to user.id, user%></td>
+<td><%=user.email%></td> 
+<td><%=user.name.capitalize %></td>
+<td><%=user.foodreq%></td>
+</tr> 
+
+<% end %>
+</table>
+
+<div class = "spacey">
+<div class = "spacey">
+<div align="center"> <%= link_to 'Crear Usuario', new_user_path, class:'btn' %> </div>
 
  <% else %>
-<h3 align='center'> Se requieren permisos Admin para esta caracteristica </h3>
+ 
+<div class="alert alert-info" role="alert">
+<h3 align="center">No tienes permiso para ver este contenido</h3>
+</div>
+
  <% end %>
 
- 

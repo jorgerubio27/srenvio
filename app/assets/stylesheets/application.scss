@@ -15,15 +15,54 @@ body {
   position: absolute;
   bottom: 13px;
 }
+.login {
+  color: #332626;
+  margin: 0px;
+  align: center;
+  width: 25%;
+}
 
+.signup {
+  color: #332626;
+  margin: 0px;
+  align: center;
+  width: 25%;
+}
+.table-striped {
+  color: #2c2c2c;
+  font-size: 120%;
+  width:70%; 
+  margin-left:15%; 
+  margin-right:15%;
+}
+.dropdown{
+  display: inline-block;
+}
+
+.btn {
+  border-radius: 100px;
+  color: #ffffff;
+  background-color: rgb(155, 155, 155);
+}
+
+
+
+.btn_btn-primary
+{
+  color: #91ff00;
+}
+.curvedfield {
+  border-radius: 5px;
+}
 .nelement {
   font-weight: bold;
-  color: rgb(95, 84, 128);
+  color: rgb(219, 219, 219);
 }
 .tnav {
   width: 100%;
 }
 .navbar{
+  color: #CCCCCC;
   padding-top: 3px;
   background-color: #313131;
   font-size: 25px;
@@ -49,9 +88,8 @@ body {
   color: #CCCCCC;
 }
 .center {
-  margin: 0 auto;
-  align: center;
-  text-align: center;
+  margin-left:auto; 
+  margin-right:auto;
 }
 
 .fontsoft {
@@ -158,6 +196,10 @@ body {
   .space {
     padding-right: 50px;
     padding-left:  50px;
+  }
+  .spacey {
+    padding-top: 5px;
+    padding-bottom:  5px;
   }
 
   .centab {

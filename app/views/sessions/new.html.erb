@@ -3,24 +3,36 @@
 <h1 class="">Iniciar Sesión</h1>
 <%= form_tag sessions_path do |form| %>
 
-    <div align="center">
-    <table class="table">
-
-    <tr><td>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
-    </td></tr>
-
-    <tr><td>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    </td></tr>
     
-    <tr><td>
+    <table class="login">
+
+    <tr>
+    <td>Email</td>
+    <td>
+    <%= text_field_tag :email ,'',class:"curvedfield"%>
+    </td>
+    </tr>
+    <tr><td><div class = "spacey"> </div> </td></tr>
+
+
+    <tr>
+    <td>Password</td>
+    <td>
+    <%= password_field_tag :password,'',class:"curvedfield" %>
+    </td>
+    </tr>
     
-    <%= submit_tag "Acceder" ,class: 'btn' %>
-    </td></tr>
+    <tr><td><div class = "spacey"> </div> </td></tr>
+
+
+    <tr>
+    <td>
+    </td>
+    <td><%= submit_tag "Acceder" ,class: 'btn' %></td>
+    <td></td>
+    </tr>
+
     </table>
-    </div>
+   
 
 <% end %>
