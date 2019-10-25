@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'Usuario creado extitosamente.' }
+        format.html { redirect_to @user, info: 'Usuario creado extitosamente' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -63,7 +63,7 @@ class UsersController < ApplicationController
 
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Usuario eliminado u_u' }
+      format.html { redirect_to users_url, notice: 'Usuario eliminado' }
       format.json { head :no_content }
     end
   end

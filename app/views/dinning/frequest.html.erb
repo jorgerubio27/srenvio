@@ -3,23 +3,23 @@
 <table class="center">
 
 <tr><td>
-<%= fr.label :Quieres_contar_con_el_servicio_del_comedor?%>
+<h4> ¿Quieres contar con el servicio del comedor? </h4>
 </td> </tr>
 
 <tr> <td>
-<%= fr.label :Si %> <%= fr.radio_button :foodreq, 'si' %>
+<%= fr.radio_button :foodreq, 'si' %><%= fr.label :Si %> 
 </td> </tr>
 
 <tr> <td>
-<%= fr.label :No %> <%= fr.radio_button :foodreq, 'no' %>
+<%= fr.radio_button :foodreq, 'no' %><%= fr.label :No %> 
 </td> </tr>
 
 <tr> <td>
-<%= fr.label :Especial %> <%= fr.radio_button :foodreq, 'especial' %>
+<%= fr.radio_button :foodreq, 'especial' %><%= fr.label :Especial %> 
 </td> </tr>
 
-<tr> <td>
-<%= fr.submit 'Aceptar' %>
+<tr> <td align="center">
+<%= fr.submit 'Aceptar', class:'btn' %>
 </td> </tr>
 
 </table>

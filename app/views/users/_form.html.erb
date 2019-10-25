@@ -2,12 +2,10 @@
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h3>Usuario o contraseña inválidos</h3>
 
       <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+   
       </ul>
     </div>
   <% end %>
@@ -18,27 +16,27 @@
     <table class = "signup">
 
     <tr>
-    <td><%= form.label :email %></td>
+    <td><%= form.label :Email %></td>
     <td><%= form.text_field :email, class:"curvedfield" %></td>
     <td></td>
     </tr>
   
 
     <tr>
-    <td><%= form.label :name %></td>
+    <td><%= form.label :Nombre %></td>
     <td><%= form.text_field :name ,class:"curvedfield" %></td>
     <td></td>
     </tr>
   
 
     <tr>
-    <td><%= form.label :Pass %></td>
+    <td><%= form.label :Contraseña %></td>
     <td><%= form.password_field :password, class:"curvedfield" %></td>
     <td></td>
     </tr>
 
     <tr>
-    <td><%= form.label :RePass %></td>
+    <td><%= form.label :Contraseña %></td>
     <td><%= form.password_field :password_confirmation, class:"curvedfield" %></td>
     <td></td>
     </tr>

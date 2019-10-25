@@ -29,7 +29,7 @@ body {
   width: 25%;
 }
 .table-striped {
-  color: #2c2c2c;
+  color: rgb(39, 39, 39);
   font-size: 120%;
   width:70%; 
   margin-left:15%; 
@@ -45,22 +45,24 @@ body {
   background-color: rgb(155, 155, 155);
 }
 
-
-
 .btn_btn-primary
 {
   color: #91ff00;
 }
+
 .curvedfield {
   border-radius: 5px;
 }
+
 .nelement {
   font-weight: bold;
   color: rgb(219, 219, 219);
 }
+
 .tnav {
   width: 100%;
 }
+
 .navbar{
   color: #CCCCCC;
   padding-top: 3px;
@@ -68,6 +70,7 @@ body {
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
 }
+
 .navel {
   padding-top: 3px;
   padding-left: 10px;
@@ -77,10 +80,12 @@ body {
   font-size: 20px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
+
 .spaces {
   padding-left: 10px;
   padding-right: 10px;
 }
+
 .spacel {
   padding-left: 450px;
 }
@@ -115,78 +120,10 @@ body {
   text-align: center;  
 }
 
-
-
-
-
-
 .link:hover {
   color: yellow;
 
 }
-.alright {
-  
-}
-
-
-
-
-.banner {
-    background-color: #472727;
-    // background-image: radial-gradient(darkgray,black);
-    color: beige;
-    text-align: center;
-    width: 15%;
-    height: 5%;
-    border-radius: 10px;
-    margin: 0 auto;
-  }
-
-  .menu {
-    background-color: #472727;
-    text-align: center;
-    color: white;
-    width: 25%;
-    border-radius: 20px; 
-    margin: 0 auto;
-    
-    
-  }
-
-  .maincontainer {
-    text-align: center;
-    margin: 0 auto;
-    background-color: #363636;
-    width: 80%;
-    height: 999px;
-    border-radius: 10px; 
-    align-content: center;
-  }
-
-
-  .articles {
-    margin: 0 auto;
-    
-    // align-content: center;
-    text-align: center;
-    color: white;
-    width: 60%;
-  }
-
-  .form {
-    margin: 0 auto;
-   
-    text-align: center;
-    color: black;
-    width: 60%;
-  }
-
-  .articlepreview {
-    margin: 0 auto;
-    width: 50%;
-    height: 50%;
-    text-align: center;
-  }
 
   .show {
     color: aliceblue;
@@ -201,27 +138,3 @@ body {
     padding-top: 5px;
     padding-bottom:  5px;
   }
-
-  .centab {
-    text-align: center;
-    margin: 0 auto;
-    align-content: center
-  }
-
-  .articletext {
-    color: #CCCCCC
-  }
-
-  .articletitle {
-    font-size: 40px;
-    color: rgb(255, 255, 255)
-  }
-
-  .welcome {
-    text-align: center;
-    color: beige;
-}
-
- .articleform {
-   color: black;
- }
