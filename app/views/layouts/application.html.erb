@@ -54,7 +54,20 @@
 
 </tr></table>
 </div>
+
+
+
 </div>
+
+<% flash.each do |name, msg| %>
+<div align="center">
+<div class='alert alert-<%= name %>'>
+<%= msg %>
+</div>
+<% end %>
+</div>
+
+
     <%= yield %>
   
 

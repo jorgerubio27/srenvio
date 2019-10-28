@@ -32,10 +32,12 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, info: 'Usuario creado extitosamente' }
+        
+        format.html { redirect_to @user, success: 'Usuario creado extitosamente' }
         format.json { render :show, status: :created, location: @user }
       else
-        format.html { render :new }
+        format.html { redirect_to new_user_path, danger: 'Email o contraseña inválidos'}
+        # format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
@@ -46,7 +48,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'Información enviada' }
+        format.html { redirect_to @user, success: 'Información enviada' }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -63,7 +65,7 @@ class UsersController < ApplicationController
 
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'Usuario eliminado' }
+      format.html { redirect_to users_url, info: 'Usuario eliminado' }
       format.json { head :no_content }
     end
   end
@@ -74,7 +76,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation, :foodreq, :name)
     end
