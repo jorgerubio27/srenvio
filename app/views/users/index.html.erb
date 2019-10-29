@@ -34,7 +34,16 @@
 
 <div class = "spacey">
 <div class = "spacey">
-<div align="center"> <%= link_to 'Crear Usuario', new_user_path, class:'btn' %> </div>
+
+<table align="center">
+<tr>
+
+<td> <div align="center"> <%= link_to 'Crear Usuario', new_user_path, class:'btn' %> </div> </td>
+<td> <div class="space"> </td>
+<td> <div align="center"> <a class="btn" href="users.xls">Descargar</a>  </td>
+
+</tr>
+</table>
 
  <% else %>
  

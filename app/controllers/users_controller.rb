@@ -7,8 +7,28 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+      @users = User.all
+      @sheet = User.all
+      # @sheet = User.pluck(:name, :foodreq)
+
+      respond_to do |format|
+      format.html
+      format.csv {send_data @sheet.to_csv}
+      format.xls {send_data @sheet.to_csv(col_sep: "\t") }
+
+      
+      # format.html
+      # format.csv { send_data User.tux(@users), filename: "usuarios-#{Date.today}.csv" }
+       end
   end
+
+  
+
+
+
+
+
+
 
   # GET /users/1
   # GET /users/1.json
@@ -80,4 +100,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:email, :password, :password_confirmation, :foodreq, :name)
     end
+
+    
 end
