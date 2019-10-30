@@ -1,16 +1,16 @@
 <table border="1">
     <tr>
-    <th>ID</th>
-    <th>Name</th>
-    <th>Release date</th>
-    <th>Price</th>
+    <th>Email</th>
+    <th>Nombre</th>
+    <th>Comedor</th>
     </tr>
 
     <% @users.each do |user| %>
-    <tr>
-    <td>    <%= user.id %>    </td>
+    <tr>    
+    <td>    <%= user.email %>    </td>
     <td>    <%= user.name %>    </td>
-
+    <td>    <%= user.foodreq %>    </td>
+    </tr>
     <% end %>
 
 

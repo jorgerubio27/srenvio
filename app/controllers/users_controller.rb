@@ -8,13 +8,14 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
       @users = User.all
-      @sheet = User.all
+      @sheet = User.pluck('id', 'name', 'foodreq')
+      
       # @sheet = User.pluck(:name, :foodreq)
 
       respond_to do |format|
       format.html
       format.csv {send_data @sheet.to_csv}
-      format.xls {send_data @sheet.to_csv(col_sep: "\t") }
+      format.xls #{send_data @sheet.to_csv(col_sep: "\t") }
 
       
       # format.html
