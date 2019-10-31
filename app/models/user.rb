@@ -2,6 +2,9 @@ class User < ApplicationRecord
   has_secure_password
   validates :email, presence: true, uniqueness: true
 
+  validates :email, format: { with: /\b[A-Z0-9._%a-z\-]+@srenvio\.com\z/,
+    message: "must be a kodak.com account" }
+
 
   def self.to_csv(options = { })
     CSV.generate(options) do |csv|

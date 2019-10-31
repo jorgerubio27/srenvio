@@ -11,6 +11,9 @@
 body {
   background-color: rgb(228, 228, 228);
 }
+.emailstyle {
+  text-align: center;
+}
 .divlogo {
   position: absolute;
   bottom: 13px;
@@ -21,14 +24,12 @@ body {
 .login {
   color: #332626;
   margin: 0px;
-  align: center;
   width: 25%;
 }
 
 .signup {
   color: #332626;
   margin: 0px;
-  align: center;
   width: 25%;
 }
 .table-striped {
@@ -72,6 +73,7 @@ body {
   background-color: #313131;
   font-size: 25px;
   font-family: "Times New Roman", Times, serif;
+  border-radius: 0px;
 }
 
 .navel {
