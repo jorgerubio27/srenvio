@@ -9,48 +9,54 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </head>
-
   <body>
 
-  <div class="navbar">
 
-  <table class="tnav"><tr>
-    <td>  <%= link_to image_tag('logo.svg'), root_path %> </td>
 
-    <td align="right">
+
+
+
+
+
+
+
+  <table class="navbar"><tr> 
+
+  <td><ul class="logo"><%= link_to image_tag('logow.svg'), root_path %> </ul> </td>
+
+  <td align="right">
+  <ul class="navelement">  <%= link_to "REGLAMENTO", new_user_path , class:'btn'%>  </ul>
+
       <% if current_user %> 
       <% if current_user.admin == true %>  
       <%= link_to "USUARIOS", users_path , class:'btn '%>
       <% end %>
+
+   
+      <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">COMEDOR
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <li><%= link_to "Solicitar", dinning_frequest_path %> </li>
+      <li><%= link_to "Menú", '' %> </li>
+      </ul>
+      </div>
       
-  <div class="dropdown">
-  <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">COMEDOR
-  <span class="caret"></span></button>
-  <ul class="dropdown-menu">
-    <li><%= link_to "Solicitar", dinning_frequest_path %> </li>
-    <li><%= link_to "Menú", '' %> </li>
 
-  </ul>
-</div>
-
-
-   Bienvenid@   <%= current_user.name.split.first %>!
-  <%= link_to "SALIR", logout_path ,class:'btn'%> </td> 
-
+      Bienvenid@   <%= current_user.name.split.first %>!
+      <%= link_to "SALIR", logout_path ,class:'btn'%>
+  
+  
   <% else %>
-  <td align="right"> <%= link_to "Registrate", new_user_path , class:'btn'%> 
-  <%= link_to "Inicia Sesión", login_path , class:'btn' %> </td> 
+  <%= link_to "REGISTRATE", new_user_path , class:'btn'%> 
+  <%= link_to "INICIA SESION", login_path , class:'btn' %>
   <% end %>
   
+ </td> </tr> </table>
   
-  </div>
-
-</tr></table>
-</div>
 
 
 
-</div>
 
 <% flash.each do |name, msg| %>
 <div align="center">
