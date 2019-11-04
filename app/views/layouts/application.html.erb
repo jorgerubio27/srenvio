@@ -24,7 +24,17 @@
   <td><ul class="logo"><%= link_to image_tag('logow.svg'), root_path %> </ul></td>
 
   <td align="right">
-  <ul class="navelement">  <%= link_to "REGLAMENTO", rules_path , class:'btn'%>  </ul>
+
+       <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">DOCUMENTOS
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <li><%= link_to "Reglamento", "/reglamento_srenvio.pdf", target: :_blank  %></li>
+      <li><%= link_to "", '' %> </li>
+      </ul>
+      </div>
+
+  
 
       <% if current_user %> 
       <% if current_user.admin == true %>  
