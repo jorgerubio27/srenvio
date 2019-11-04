@@ -23,19 +23,24 @@
 
     <tr>
     <td><%= form.label :Email %></td>
-    <td><%= form.text_field :email, class:"curvedfield", 
-    class:"emailstyle", value: "@srenvio.com"%></td>
+    
+    <td>
+    <% if current_user && current_user.admin == true  %>
+    <%= form.text_field :email, class:"curvedfield" %>
+    <% else %>
+    <%= form.text_field :email, class:"curvedfield",
+    class:"emailstyle", value: "@srenvio.com"%>
+    <% end %>
+    </td>
     <td></td>
     </tr>
   
-
     <tr>
     <td><%= form.label :Nombre %></td>
     <td><%= form.text_field :name ,class:"curvedfield" %></td>
     <td></td>
     </tr>
   
-
     <tr>
     <td><%= form.label :Contraseña %></td>
     <td><%= form.password_field :password, class:"curvedfield" %></td>
@@ -53,7 +58,6 @@
     <td> <div class="spacey"> <div align="center"> <%= form.submit 'Crear', class:'btn' %> </div> </div> </td>
     <td></td>
     </tr>
-
 
     </table>
 <% end %>
