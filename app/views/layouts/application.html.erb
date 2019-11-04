@@ -18,14 +18,13 @@
 
 
 
+<!-- Nav  -->
+<table class="navbar"><tr> 
 
-
-  <table class="navbar"><tr> 
-
-  <td><ul class="logo"><%= link_to image_tag('logow.svg'), root_path %> </ul> </td>
+  <td><ul class="logo"><%= link_to image_tag('logow.svg'), root_path %> </ul></td>
 
   <td align="right">
-  <ul class="navelement">  <%= link_to "REGLAMENTO", new_user_path , class:'btn'%>  </ul>
+  <ul class="navelement">  <%= link_to "REGLAMENTO", rules_path , class:'btn'%>  </ul>
 
       <% if current_user %> 
       <% if current_user.admin == true %>  
@@ -41,23 +40,21 @@
       <li><%= link_to "Menú", '' %> </li>
       </ul>
       </div>
-      
 
       Bienvenid@   <%= current_user.name.split.first %>!
       <%= link_to "SALIR", logout_path ,class:'btn'%>
   
+      <% else %>
+      <%= link_to "REGISTRATE", new_user_path , class:'btn'%> 
+      <%= link_to "INICIA SESION", login_path , class:'btn' %>
+      <% end %>
   
-  <% else %>
-  <%= link_to "REGISTRATE", new_user_path , class:'btn'%> 
-  <%= link_to "INICIA SESION", login_path , class:'btn' %>
-  <% end %>
-  
- </td> </tr> </table>
+</td></tr> </table>
   
 
 
 
-
+<!-- Alerts  -->
 <% flash.each do |name, msg| %>
 <div align="center">
 <div class='alert alert-<%= name %>'>

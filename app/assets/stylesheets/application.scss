@@ -14,10 +14,11 @@ body {
 .emailstyle {
   text-align: center;
 }
+
 .divlogo {
   position: absolute;
-  bottom: 13px;
 }
+
 .logo {
   height: 55px;
   width: 120px;
@@ -25,9 +26,11 @@ body {
   margin: 0px;
   display: inline-block;
 }
+
 .pics {
   border: 20  px solid black;
 }
+
 .login {
   color: #332626;
   margin: 0px;
@@ -39,6 +42,7 @@ body {
   margin: 0px;
   width: 25%;
 }
+
 .table-striped {
   color: rgb(39, 39, 39);
   font-size: 120%;
@@ -46,7 +50,9 @@ body {
   margin-left:15%; 
   margin-right:15%;
 }
-.dropdown{
+
+.dropdown 
+{
   display: inline-block;
 }
 
@@ -54,7 +60,6 @@ body {
   border-radius: 100px;
   color: #ffffff;
   background-color: rgb(155, 155, 155);
-  
 }
 
 .btn_btn-primary
@@ -69,10 +74,6 @@ body {
 .nelement {
   font-weight: bold;
   color: rgb(219, 219, 219);
-}
-
-.tnav {
-  width: 100%;
 }
 
 .navbar{
