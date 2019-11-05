@@ -52,7 +52,17 @@
       </div>
 
       Bienvenid@   <%= current_user.name.split.first %>!
-      <%= link_to "SALIR", logout_path ,class:'btn'%>
+      <div class="btn-group dropleft">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu pull-right">
+      <li><%= link_to "Cambiar Contraseña", usersettings_passwordchange_path %> </li>
+      <li><%= link_to "Salir", logout_path %> </li>
+      </ul>
+      </div>
+  
+  
+
   
       <% else %>
       <%= link_to "REGISTRATE", new_user_path , class:'btn'%> 
@@ -78,4 +88,7 @@
   
 
 
+  
+
 </html>
+

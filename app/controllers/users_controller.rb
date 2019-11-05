@@ -61,9 +61,7 @@ class UsersController < ApplicationController
   end
 
 
-  def passwordchange
-     @user = current_user
-  end
+
 
 
   private
