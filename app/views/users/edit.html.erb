@@ -3,11 +3,7 @@
 <% if current_user && current_user.admin == true  %>
 
 
-<%
-=begin%>
- <%= render 'form', user: @user %> 
-<%
-=end%>
+
 <div align="center">
 
 <%= form_with(model: @user, local: true) do |form| %>
