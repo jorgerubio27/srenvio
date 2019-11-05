@@ -3,7 +3,75 @@
 <% if current_user && current_user.admin == true  %>
 
 
-<%= render 'form', user: @user %>
+<%
+=begin%>
+ <%= render 'form', user: @user %> 
+<%
+=end%>
+<div align="center">
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      
+
+      
+
+      <ul>
+   
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+
+    <table class = "signup">
+
+    <tr>
+    <td><%= form.label :Email %></td>
+    
+    <td>
+    <%= form.text_field :email, class:"curvedfield" %>
+    </td>
+    <td></td>
+    </tr>
+  
+    <tr>
+    <td><%= form.label :Nombre %></td>
+    <td><%= form.text_field :name ,class:"curvedfield" %></td>
+    <td></td>
+    </tr>
+  
+    <tr>
+    <td><%= form.label :Contraseña %></td>
+    <td><%= form.password_field :password, class:"curvedfield" %></td>
+    <td></td>
+    </tr>
+
+    <tr>
+    <td><%= form.label :Contraseña %></td>
+    <td><%= form.password_field :password_confirmation, class:"curvedfield" %></td>
+    <td></td>
+    </tr>
+
+    <tr>
+    <td></td>
+    <td> <div class="spacey"> <div align="center"> <%= form.submit 'Crear', class:'btn' %> </div> </div> </td>
+    <td></td>
+    </tr>
+
+    </table>
+<% end %>
+</div>
+
+
+
+
+
+
 
 <div align = "center">
 <%= link_to 'Show', @user %> |

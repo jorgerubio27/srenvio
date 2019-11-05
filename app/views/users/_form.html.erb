@@ -25,12 +25,8 @@
     <td><%= form.label :Email %></td>
     
     <td>
-    <% if current_user && current_user.admin == true  %>
-    <%= form.text_field :email, class:"curvedfield" %>
-    <% else %>
     <%= form.text_field :email, class:"curvedfield",
     class:"emailstyle", value: "@srenvio.com"%>
-    <% end %>
     </td>
     <td></td>
     </tr>
