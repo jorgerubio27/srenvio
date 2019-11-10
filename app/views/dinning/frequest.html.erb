@@ -1,10 +1,17 @@
 <%= form_with(model: @user, local: true) do |fr| %>
 
+<div class="spacey"></div>
+<div class="spacey"></div>
+<div class="spacey"></div>
+
+<div class="container">
+<p class="title">Solicitud de comedor</p>
+</div>
+<div align="center"><h5>¿Quieres contar con el servicio del comedor este ciclo? </h5></div>
+<div class="spacey"></div>
+
 <table class="center">
 
-<tr><td>
-<h4> ¿Quieres contar con el servicio del comedor? </h4>
-</td> </tr>
 
 <tr> <td>
 <%= fr.radio_button :foodreq, 'si' %><%= fr.label :Si %> 
@@ -19,8 +26,13 @@
 </td> </tr>
 
 <tr> <td align="center">
-<%= fr.submit 'Aceptar', class:'btn' %>
+
 </td> </tr>
 
 </table>
+    <div class="spacey"></div>
+    <div class="container">
+    <%= fr.submit 'Aceptar', class:'btn btn-lg btn-block' %>
+    </div>
+    <div class="spacey"></div>
 <% end %>

@@ -1,0 +1,65 @@
+
+<table class="navbar"><tr> 
+
+  <td><ul class="logo"><%= link_to image_tag('logo.svg'), root_path %> </ul></td>
+
+  <td align="right">
+
+      <% if current_user %> 
+      <% if current_user.admin == true %>  
+      <%= link_to "Administración", users_path , class:'btn'%>
+      <% end %>
+
+        
+        <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Documentos
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <li><%= link_to "Reglamento", "/reglamento_srenvio.pdf", target: :_blank  %></li>
+      <li><%= link_to "", '' %> </li>
+      </ul>
+      </div>
+
+        
+
+      <div class="dropdown">
+      <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">Comedor
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      <li><%= link_to "Solicitar", dinning_frequest_path %> </li>
+      <li><%= link_to "Menu", "/menusemanal.pdf", target: :_blank  %></li>
+      </ul>
+      </div>
+
+      <div class="welcome-message"> ¡Bienvenid@
+      <%= current_user.name.split.first %>!
+      </div>
+
+
+
+ 
+
+      <div class="btn-group  dropleft">
+      <button class="btn dropdown-toggle btn-warning active" type="button" data-toggle="dropdown">
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu pull-right">
+      <li><%= link_to "Cambiar Contraseña", usersettings_passwordchange_path %> </li>
+      <li><%= link_to "Salir", logout_path %> </li>
+      </ul>
+      </div>
+  
+  
+
+  
+      <% else %>
+    <%= link_to "Inicia sesión", login_path , class:'btn' %>
+     <%= link_to "Registrarse", new_user_path , class:'btn btn-warning active'%> 
+      
+      <% end %>
+  
+</td></tr> </table>
+  
+
+    <ul class="nav nav-tabs">
+    </ul>
+

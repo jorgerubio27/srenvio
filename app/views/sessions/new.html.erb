@@ -1,8 +1,15 @@
 <div align="center">
 
 
+<div class="spacey"></div>
+<div class="spacey"></div>
+<div class="spacey"></div>
 
-<h1 class="">Iniciar Sesión</h1>
+<div class="container">
+<p class="title">Inicia Sesión</p>
+</div>
+<div class="spacey"></div>
+
 <%= form_tag sessions_path do |form| %>
 
 
@@ -27,14 +34,17 @@
     <tr><td><div class = "spacey"> </div> </td></tr>
 
 
-    <tr>
-    <td>
-    </td>
-    <td><%= submit_tag "Acceder" ,class: 'btn' %></td>
-    <td></td>
-    </tr>
+
+
+
 
     </table>
-   
+    <div class="spacey"></div>
+    <div class="container">
+    <%= submit_tag "Acceder" ,class: 'btn btn-lg btn-block' %>
+    </div>
+    <div class="spacey"></div>
+    
+
 
 <% end %>
