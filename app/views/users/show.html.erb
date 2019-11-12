@@ -3,26 +3,28 @@
 <div align ="center">
 <% if current_user && current_user.admin == true  %>
 
-<table class="table-striped">
+<table class="table-striped; form">
   <tr>
-  <td><strong>ID:</strong></td>
+  <td>ID:</td>
   <td><%= @user.id %></td>
   </tr>
   <tr>
-  <td><strong>Email:</strong></td>
+  <td>Email:</td>
   <td><%= @user.email%></td>
   </tr>
-  <td> <strong>Nombre:</strong></td>
+  <td>Nombre:</td>
   <td><%= @user.name %></td>
   <tr>
-  <td><strong>Comedor:</strong></td>
+  <td>Comedor:</td>
   <td><%= @user.foodreq %></td>
   </tr>
 </table>
 
-<%= link_to 'Editar', edit_user_path(@user) %> |
-<%= link_to 'Volver', users_path %>|
-<td><%= link_to 'Eliminar', @user, method: :delete, data: { confirm: 'Confirmar acción' } %></td>
+
+
+<%= link_to 'Editar', edit_user_path(@user), class:'btn' %> |
+<%= link_to 'Volver', users_path, class:'btn' %>|
+<td><%= link_to 'Eliminar', @user, method: :delete, data: { confirm: 'Confirmar acción' }, class:'btn' %></td>
 
 
 <% else %>

@@ -1,4 +1,11 @@
-<h1 align ="center">Editar usuario</h1>
+<div class="spacey"></div>
+<div class="spacey"></div>
+<div class="spacey"></div>
+
+<div class="container">
+<p class="title">Editar</p>
+</div>
+<div class="spacey"></div>
 
 <% if current_user && current_user.admin == true  %>
 
@@ -24,7 +31,7 @@
 
 
 
-    <table class = "signup">
+    <table class = "form">
 
     <tr>
     <td><%= form.label :Email %></td>
@@ -57,7 +64,11 @@
 
     </table>
 
-    <div class="spacey"> <%= form.submit 'Crear', class:'btn' %> </div>
+    <div class="spacey"></div>
+    <div class="container">
+    <%= submit_tag "Crear" ,class: 'btn btn-lg btn-block' %>
+    </div>
+    <div class="spacey"></div>
 
 <% end %>
 </div>
@@ -69,8 +80,8 @@
 
 
 <div align = "center">
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Show', @user, class:'btn' %> |
+<%= link_to 'Back', users_path, class:'btn' %>
 </div>
 
 <% else %>

@@ -5,7 +5,7 @@
     <th>Comedor</th>
     </tr>
 
-    <% @users.each do |user| %>
+    <% @users.order(:name).each do |user| %>
     <tr>    
     <td>    <%= user.email %>    </td>
     <td>    <%= user.name %>    </td>

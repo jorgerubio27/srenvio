@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'menutoday', to: 'dinning#today', as: 'menutoday'
   get 'frequest', to: 'dinning#frequest', as: 'frequest'
   get 'rules', to: 'info#rules', as: 'rules'
+  
 
 
   get '/users/:id/passwordchange', to:'users#passwordchange', as: 'passwordchange'

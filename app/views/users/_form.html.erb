@@ -1,5 +1,13 @@
 <div align="center">
 
+<div class="spacey"></div>
+<div class="spacey"></div>
+<div class="spacey"></div>
+
+<div class="container">
+<p class="title">Registrarse</p>
+</div>
+<div class="spacey"></div>
 
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
@@ -19,10 +27,10 @@
 
 
 
-    <table class = "signup">
+    <table class = "form">
 
     <tr>
-    <td><%= form.label :Email %></td>
+    <td>Email</td>
     
     <td>
     <%= form.text_field :email, class:"curvedfield",
@@ -32,19 +40,19 @@
     </tr>
   
     <tr>
-    <td><%= form.label :Nombre %></td>
+    <td>Nombre</td>
     <td><%= form.text_field :name ,class:"curvedfield" %></td>
     <td></td>
     </tr>
   
     <tr>
-    <td><%= form.label :Contraseña %></td>
+    <td>Contraseña</td>
     <td><%= form.password_field :password, class:"curvedfield" %></td>
     <td></td>
     </tr>
 
     <tr>
-    <td><%= form.label :Contraseña %></td>
+    <td>Contraseña</td>
     <td><%= form.password_field :password_confirmation, class:"curvedfield" %></td>
     <td></td>
     </tr>
