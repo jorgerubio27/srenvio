@@ -60,6 +60,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def foodreqreset
+    @usersfoodreq = User.all
+    @usersfoodreq.update_all(foodreq: "")
+    respond_to do |format|
+      format.html { redirect_to users_url, info: 'Comedor Reseteado' }
+      format.json { head :no_content }
+    end
+  end
+
 
 
 

@@ -32,4 +32,7 @@ Rails.application.routes.draw do
   get 'dinning/check'
   get 'dinning/frequest'
   get 'home/index'
+
+  post 'users/foodreqreset'
+
 end

@@ -5,6 +5,7 @@
 
 
 
+
 <div class="spacey"></div>
 <div class="spacey"></div>
 
@@ -49,6 +50,17 @@
 <td> <div align="center"> <%= link_to 'Crear Usuario', new_user_path, class:'btn' %> </div> </td>
 <td> <div class="space"> </td>
 <td> <div align="center"> <a class="btn" href="users.xls">Descargar</a>  </td>
+<td> <div class="space"> </td>
+<td> <%= button_to 'Reiniciar Comedor', users_foodreqreset_path, method: :post,data: { confirm: 'Confirmar acción' }, class:'btn' %> </td>
+
+
+
+
+
+
+
+
+
 
 </tr>
 </table>
@@ -61,9 +73,3 @@
 
  <% end %>
 
-<div>
-<%= form_with(model: @upload, local: false) do |f| %>
-<%= f.file_field  :file%>
-<%= f.submit 'enviar' %>
-<% end %>
-</div>
