@@ -34,5 +34,7 @@ Rails.application.routes.draw do
   get 'home/index'
 
   post 'users/foodreqreset'
+  post 'users/openfr'
+  post 'users/closefr'
 
 end

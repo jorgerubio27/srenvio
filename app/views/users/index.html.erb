@@ -51,7 +51,26 @@
 <td> <div class="space"> </td>
 <td> <div align="center"> <a class="btn" href="users.xls">Descargar</a>  </td>
 <td> <div class="space"> </td>
-<td> <%= button_to 'Reiniciar Comedor', users_foodreqreset_path, method: :post,data: { confirm: 'Confirmar acción' }, class:'btn' %> </td>
+<td>
+
+      <div class="btn-group  dropleft">
+      <button class="btn dropdown-toggle btn-warning active" 
+      type="button" data-toggle="dropdown">Solicitudes de comedor
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu pull-right">
+      <li><%= link_to 'Abrir Solicitudes de Comedor', users_openfr_path,
+        method: :post,data: { confirm: 'Confirmar acción' } %> </li>
+      <li><%= link_to 'Cerrar Solicitudes de Comedor', users_closefr_path,
+        method: :post,data: { confirm: 'Confirmar acción' } %> </li>
+      <li><%= link_to 'Reiniciar solicitudes', users_foodreqreset_path,
+        method: :post,data: { confirm: 'Confirmar acción' } %>
+      </ul>
+      </div>
+</td>
+      
+
+
+ 
 
 
 

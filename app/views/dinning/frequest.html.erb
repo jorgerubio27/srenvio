@@ -1,3 +1,6 @@
+<% if current_user && current_user.openfr == true  %>
+
+
 <%= form_with(model: @user, local: true) do |fr| %>
 
 <div class="spacey"></div>
@@ -36,3 +39,12 @@
     </div>
     <div class="spacey"></div>
 <% end %>
+
+<% else %>
+
+ 
+<div class="alert alert-info" role="alert">
+<h3 align="center">Las Solicitudes de comedor no están abiertas por el momento</h3>
+</div>
+
+ <% end %>

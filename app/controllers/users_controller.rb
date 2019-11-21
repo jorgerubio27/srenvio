@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     @user.email = @user.email.downcase
     @user.name = @user.name.downcase
+    @user.openfr = true
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, success: 'Usuario creado extitosamente' }
@@ -69,8 +70,23 @@ class UsersController < ApplicationController
     end
   end
 
+  def openfr
+    @openfr = User.all
+    @openfr.update_all(openfr: true)
+    respond_to do |format|
+      format.html { redirect_to users_url, info: 'Solicitudes de comedor abiertas' }
+      format.json { head :no_content }
+    end
+  end
 
-
+  def closefr
+    @closefr = User.all
+    @closefr.update_all(openfr: false)
+    respond_to do |format|
+      format.html { redirect_to users_url, info: 'Solicitudes de comedor cerradas' }
+      format.json { head :no_content }
+    end
+  end
 
   private
     def set_user 
@@ -78,7 +94,7 @@ class UsersController < ApplicationController
     end
     
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation, :foodreq, :name, :file)
+      params.require(:user).permit(:email, :password, :password_confirmation, :foodreq, :name, :openfr)
     end
 
     
