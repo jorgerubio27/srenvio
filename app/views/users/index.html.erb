@@ -1,10 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
 <% if current_user && current_user.admin == true  %>
-
-
-
 
 <div class="spacey"></div>
 <div class="spacey"></div>
@@ -13,9 +9,6 @@
 <p class="title">Usuarios</p>
 </div>
 <div class="spacey"></div>
-
-
-
 
 <table class= "table-striped"> 
 <tr>
@@ -26,10 +19,6 @@
 </tr>
 
 <% @users.each do |user| %>
-
-
-
-
 
 <tr>
 <td><%=link_to user.id, user%></td>
@@ -43,20 +32,17 @@
 
 <div class = "spacey">
 <div class = "spacey">
-
 <table align="center">
 <tr>
-
 <td> <div align="center"> <%= link_to 'Crear Usuario', new_user_path, class:'btn' %> </div> </td>
 <td> <div class="space"> </td>
 <td> <div align="center"> <a class="btn" href="users.xls">Descargar</a>  </td>
 <td> <div class="space"> </td>
 <td>
-
       <div class="btn-group  dropleft">
       <button class="btn dropdown-toggle btn-warning active" 
       type="button" data-toggle="dropdown">Solicitudes de comedor
-      <span class="caret"></span></button>
+      <span class="caret"></span></button >
       <ul class="dropdown-menu pull-right">
       <li><%= link_to 'Abrir Solicitudes de Comedor', users_openfr_path,
         method: :post,data: { confirm: 'Confirmar acción' } %> </li>
@@ -67,22 +53,13 @@
       </ul>
       </div>
 </td>
-      
-
-
- 
-
-
-
-
-
-
-
-
-
-
 </tr>
 </table>
+<div class="spacey"></div>
+<div class="spacey"></div>
+<div class="spacey"></div>
+<div class="spacey"></div>
+
 
  <% else %>
  
