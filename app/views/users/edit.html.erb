@@ -34,8 +34,7 @@
     <table class = "form">
 
     <tr>
-    <td><%= form.label :Email %></td>
-    
+    <td>Email</td>
     <td>
     <%= form.text_field :email, class:"curvedfield" %>
     </td>
@@ -43,30 +42,34 @@
     </tr>
   
     <tr>
-    <td><%= form.label :Nombre %></td>
+    <td>Nombre</td>
     <td><%= form.text_field :name ,class:"curvedfield" %></td>
     <td></td>
     </tr>
   
     <tr>
-    <td><%= form.label :Contraseña %></td>
+    <td>Contraseña</td>
     <td><%= form.password_field :password, class:"curvedfield" %></td>
     <td></td>
     </tr>
 
     <tr>
-    <td><%= form.label :Contraseña %></td>
+    <td>Contraseña</td>
     <td><%= form.password_field :password_confirmation, class:"curvedfield" %></td>
     <td></td>
     </tr>
 
-
+    <tr>
+    <td>Administrador</td>
+    <td><%= form.radio_button :admin, true %>Si <span class="space"></span>
+    <%= form.radio_button :admin, false %>No</td>
+    </tr>
 
     </table>
 
     <div class="spacey"></div>
     <div class="container">
-    <%= submit_tag "Crear" ,class: 'btn btn-lg btn-block' %>
+    <%= submit_tag "Modificar" ,class: 'btn btn-lg btn-block' %>
     </div>
     <div class="spacey"></div>
 
